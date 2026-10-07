@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bank Nusamba Jatim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="segments" role="tablist">
+      <button class="seg active" data-seg="individu">Individu</button>
+      <button class="seg" data-seg="bisnis">Bisnis</button>
+    </div>
+    <span>Kontak: 1500-000 &nbsp;|&nbsp; ID / EN</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="logo">Nusamba<b>Jatim</b></a>
+    <button class="burger" aria-label="Buka menu" aria-expanded="false">Menu</button>
+    <nav id="menu">
+      <a href="#produk">Produk</a>
+      <a href="#simulasi">Simulasi</a>
+      <a href="#kurs">Suku Bunga</a>
+      <a href="#cabang">Cabang</a>
+      <a href="#berita">Berita</a>
+      <a href="#" class="btn small">Masuk</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-roledescription="carousel">
+  <div class="slide active">
+    <h1>Tabungan yang tumbuh bersama usaha Anda</h1>
+    <p>Buka rekening online dalam 5 menit, tanpa antre.</p>
+    <a href="#produk" class="btn gold">Lihat produk</a>
+  </div>
+  <div class="slide">
+    <h1>Kredit usaha dengan cicilan yang jelas</h1>
+    <p>Hitung sendiri cicilan Anda sebelum mengajukan.</p>
+    <a href="#simulasi" class="btn gold">Coba simulasi</a>
+  </div>
+  <div class="slide">
+    <h1>Deposito dengan bunga kompetitif</h1>
+    <p>Pilih tenor 1 sampai 24 bulan.</p>
+    <a href="#kurs" class="btn gold">Cek suku bunga</a>
+  </div>
+  <div class="dots"></div>
+</section>
+
+<section class="quick wrap">
+  <a href="#">Transfer</a><a href="#">Bayar tagihan</a><a href="#">Isi pulsa</a>
+  <a href="#cabang">Cari cabang</a><a href="#simulasi">Simulasi kredit</a><a href="#">Bantuan</a>
+</section>
+
+<section id="produk" class="wrap section">
+  <h2>Produk untuk <span id="segLabel">individu</span></h2>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section id="simulasi" class="band">
+  <div class="wrap calc">
+    <div>
+      <h2>Simulasi kredit</h2>
+      <p>Geser nilai untuk melihat perkiraan cicilan bulanan. Hasil bersifat estimasi.</p>
+      <label>Jumlah pinjaman: <output id="oAmt"></output>
+        <input type="range" id="amt" min="5000000" max="500000000" step="5000000" value="50000000"></label>
+      <label>Tenor: <output id="oTen"></output>
+        <input type="range" id="ten" min="6" max="120" step="6" value="36"></label>
+      <label>Bunga per tahun: <output id="oRate"></output>
+        <input type="range" id="rate" min="6" max="18" step="0.5" value="11"></label>
+    </div>
+    <div class="result">
+      <small>Cicilan per bulan</small>
+      <strong id="monthly">-</strong>
+      <small>Total pembayaran: <span id="total">-</span></small>
+      <a href="#" class="btn gold">Ajukan sekarang</a>
+    </div>
+  </div>
+</section>
+
+<section id="kurs" class="wrap section">
+  <h2>Suku bunga deposito</h2>
+  <div class="tabs" id="tenorTabs"></div>
+  <p class="rate"><strong id="rateVal"></strong> per tahun (contoh data)</p>
+</section>
+
+<section id="cabang" class="wrap section">
+  <h2>Cari cabang</h2>
+  <input type="search" id="q" placeholder="Ketik nama kota, misalnya Surabaya" aria-label="Cari cabang">
+  <ul id="branches" class="branches"></ul>
+  <p id="empty" hidden>Cabang tidak ditemukan. Coba nama kota lain.</p>
+</section>
+
+<section id="berita" class="wrap section">
+  <h2>Berita terbaru</h2>
+  <div class="cards">
+    <article><h3>Layanan mobile banking diperbarui</h3><p>Tampilan baru lebih ringan dan mudah dipakai.</p></article>
+    <article><h3>Edukasi keuangan untuk UMKM</h3><p>Pelatihan gratis di beberapa kota di Jawa Timur.</p></article>
+    <article><h3>Waspada penipuan online</h3><p>Jangan bagikan OTP dan PIN kepada siapa pun.</p></article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Bank Nusamba Jatim. Situs contoh untuk pembelajaran, bukan situs resmi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
